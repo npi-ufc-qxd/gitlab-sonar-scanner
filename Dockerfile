@@ -12,6 +12,6 @@ RUN apk add --no-cache wget && apk add --no-cache unzip
 WORKDIR /opt
 
 RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
- && unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
+ && unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip
  
 RUN ls
