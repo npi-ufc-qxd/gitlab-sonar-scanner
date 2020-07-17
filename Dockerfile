@@ -3,6 +3,12 @@ MAINTAINER NPI
 
 ENV SONAR_SCANNER_VERSION 4.4.0.2170
 
+RUN yum update \
+ && yum upgrade
+ 
+RUN yum install wget \
+ && yum install unzip
+
 WORKDIR /opt
 
 RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
