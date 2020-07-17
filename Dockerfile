@@ -1,10 +1,7 @@
 FROM centos:latest
 MAINTAINER NPI
 
-ENV SONAR_SCANNER_VERSION 4.4.0.2170
-
-RUN yum check-update \
- && yum update
+ENV SONAR_SCANNER_VERSION 4.4.0.217
  
 RUN yum -y install wget \
  && yum -y install unzip
