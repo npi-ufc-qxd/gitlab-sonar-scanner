@@ -13,6 +13,8 @@ WORKDIR /opt
 
 RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
  && unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
- && rm sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip
+ && rm sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
+ && mv sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux/sonar-scanner-${SONAR_SCANNER_VERSION}-linux/ /opt/ \
+ && rm -r sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux
  
 RUN ls
