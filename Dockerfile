@@ -15,6 +15,8 @@ RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-s
  && unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
  && rm sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip
  
+RUN apk del wget unzip
+ 
 ENV PATH="/opt/sonar-scanner-${SONAR_SCANNER_VERSION}-linux/bin:${PATH}"
 
 CMD sonar-scanner
