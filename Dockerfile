@@ -12,8 +12,8 @@ RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-s
  && unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip \
  && rm sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip
  
-RUN yum remove wget \
- && yum remove unzip
+RUN yum -y remove wget \
+ && yum -y remove unzip
   
 ENV PATH="/opt/sonar-scanner-${SONAR_SCANNER_VERSION}-linux/bin:${PATH}"
 
