@@ -6,7 +6,8 @@ ENV SONAR_SCANNER_VERSION 4.4.0.2170
 RUN yum -y install wget \
  && yum -y install unzip
  
-RUN dnf install nodejs
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - \
+ && yum install nodejs
 
 WORKDIR /opt
 
